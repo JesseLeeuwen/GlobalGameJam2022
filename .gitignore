@@ -58,3 +58,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# plugins
+Unity/Assets/Ludiq/*
+Unity/Assets/Ludiq.generated/*
+Unity/Assets/Ludiq.Generated.meta
+Unity/Assets/Ludiq.meta
