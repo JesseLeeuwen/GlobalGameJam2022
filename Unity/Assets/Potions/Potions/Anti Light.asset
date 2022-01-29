@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 402229ddfe52c8147814195f8205a588, type: 3}
-  m_Name: New Potion
+  m_Name: Anti Light
   m_EditorClassIdentifier: 
   Name: Anti Light
   sprite: {fileID: -2413806693520163455, guid: 6971565f506d10d45a6e94980aa7078a, type: 3}
+  value: 100
+  RepChange: -10
   cures:
   - {fileID: 11400000, guid: 3172786a71cf73e4eb646ea2d97d2722, type: 2}
   causes:

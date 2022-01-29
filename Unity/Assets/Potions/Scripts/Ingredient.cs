@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu( menuName = "Ingredient")]
 public class Ingredient : ScriptableObject
 {
-    public string Name;
     public Sprite Sprite;
-    
+    public float Cost;    
 }

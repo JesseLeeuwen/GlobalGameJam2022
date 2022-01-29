@@ -12,8 +12,9 @@ public class Kettle : MonoBehaviour, IDropHandler
     public RecipeDatabase database;
 
     // show potion details
+    [Header("events")]
     [SerializeField] private EventAsset OnRecipeCrafted;
-
+    [SerializeField] private EventAsset OnDropped;
 
     // query database for potions 
     public void Craft()
@@ -27,11 +28,9 @@ public class Kettle : MonoBehaviour, IDropHandler
     {
         IngredientView view = eventData.pointerDrag.GetComponent<IngredientView>();
         Ingredient ingredient = view.ingredient;
-
-        view.Disolve();
-
         Ingredients.Add(ingredient);
+     
+        OnDropped.Invoke( view.ingredient );
+        view.Disolve();
     }
-
-
 }

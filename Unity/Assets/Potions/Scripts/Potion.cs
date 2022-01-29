@@ -5,8 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Potion")]
 public class Potion : ScriptableObject
 {
-    public string Name;
     public Sprite sprite;
+    public float value;
+    public float RepChange;
 
     // effects
     public List<Effect> cures;
