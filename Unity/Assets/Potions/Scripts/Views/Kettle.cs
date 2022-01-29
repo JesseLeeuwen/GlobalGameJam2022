@@ -19,6 +19,9 @@ public class Kettle : MonoBehaviour, IDropHandler
     // query database for potions 
     public void Craft()
     {
+        if( Ingredients.Count == 0 )
+            return;
+
         Recipe recipe = database.GetMatch(Ingredients);
         OnRecipeCrafted.Invoke( recipe );
 
