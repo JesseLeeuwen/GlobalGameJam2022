@@ -13,7 +13,7 @@ public class RecipeDatabase : ScriptableObject
         recipes.Add(recipe);
     }
 
-    public Recipe GetMatch( Ingredient[] ingredients )
+    public Recipe GetMatch( List<Ingredient> ingredients )
     {
         foreach( Recipe recipe in recipes )
         {

@@ -3,24 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+using Utilities.Events;
+
 public class Kettle : MonoBehaviour, IDropHandler
 {
     // handle ondrop of ingredients x
     // remember ingredients x
     public List<Ingredient> Ingredients;
     public RecipeDatabase database;
-    // query database for potions 
 
     // show potion details
+    [SerializeField] private EventAsset OnRecipeCrafted;
 
-    void Start()
+
+    // query database for potions 
+    public void Craft()
     {
-        
-    }
-    
-    void Update()
-    {
-        
+        Recipe recipe = database.GetMatch(Ingredients);
+        print("crafting: " + recipe);
+        OnRecipeCrafted.Invoke( recipe );
     }
 
     public void OnDrop(PointerEventData eventData)

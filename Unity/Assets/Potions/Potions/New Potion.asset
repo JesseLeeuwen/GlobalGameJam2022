@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402229ddfe52c8147814195f8205a588, type: 3}
   m_Name: New Potion
   m_EditorClassIdentifier: 
-  Name: 
-  sprite: {fileID: 0}
+  Name: Anti Light
+  sprite: {fileID: -2413806693520163455, guid: 6971565f506d10d45a6e94980aa7078a, type: 3}
+  cures:
+  - {fileID: 11400000, guid: 3172786a71cf73e4eb646ea2d97d2722, type: 2}
+  causes:
+  - {fileID: 11400000, guid: d0b80fb96cfe00c4eb51ed83172bf2d8, type: 2}
+  - {fileID: 11400000, guid: 9dfd0397a7d1cd140b84ff5aa6606580, type: 2}

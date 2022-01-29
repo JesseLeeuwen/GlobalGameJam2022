@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a2c5c21b6353b479155c1299e4517d, type: 3}
-  m_Name: test recipe 1
+  m_Script: {fileID: 11500000, guid: 9460728ed8af86241b9362ad0f1865d2, type: 3}
+  m_Name: CatTail
   m_EditorClassIdentifier: 
-  potion: {fileID: 11400000, guid: 715b2cbc152477a4f975e475bbc687ac, type: 2}
-  ingredients:
-  - {fileID: 11400000, guid: c35bbff7b0c4b8d4aba65a6894764ed7, type: 2}
+  Name: 
+  Description: 
