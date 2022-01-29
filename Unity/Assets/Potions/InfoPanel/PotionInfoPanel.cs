@@ -6,15 +6,22 @@ using  Utilities.Events;
 public class PotionInfoPanel : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI potionName;
-    [SerializeField] private EventAsset onPotionCraft;
-
     [SerializeField] private RectTransform CuresHolder;
     [SerializeField] private RectTransform CausesHolder;
     [SerializeField] private GameObject effectTextPrefab;
 
+    [SerializeField, HideInInspector] private CanvasGroup group;
+
+    [Header("Events")]
+    [SerializeField] private EventAsset onPotionCraft;
+    [SerializeField] private EventAsset onNewCustomer;
+
     void Start()
     {
         onPotionCraft.AddListener( OnPotionCraft );
+        onNewCustomer.AddListener( OnNewCustomer );
+
+        group = GetComponent<CanvasGroup>();
     }
 
     public void Refresh( Potion potion )
@@ -40,8 +47,18 @@ public class PotionInfoPanel : MonoBehaviour
         }   
     }
 
+    private void OnNewCustomer( object data )
+    {
+        group.alpha = 0;
+    }
+
     private void OnPotionCraft( object data )
     {
-        Refresh( ((Recipe)data).potion );
+        Potion potion = ((Recipe)data).potion;
+        if( potion == null )
+            return;
+
+        group.alpha = 1;
+        Refresh( potion );
     }
 }
