@@ -7,5 +7,5 @@ public class Recipe : ScriptableObject
 {
     public Potion potion;
 
-    public List<Ingredient> ingredients;
+    public List<IngredientSlot> ingredients;
 }

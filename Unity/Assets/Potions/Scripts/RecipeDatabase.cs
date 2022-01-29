@@ -12,12 +12,12 @@ public class RecipeDatabase : ScriptableObject
         recipes.Add(recipe);
     }
 
-    public Recipe GetMatch( List<Ingredient> ingredients )
+    public Recipe GetMatch( List<IngredientSlot> ingredients )
     {
         foreach( Recipe recipe in recipes )
         {
-            IEnumerable<Ingredient> diffQuery = recipe.ingredients.Except( ingredients );
-            IEnumerable<Ingredient> diffInQuery = ingredients.Except( recipe.ingredients );
+            IEnumerable<IngredientSlot> diffQuery = recipe.ingredients.Except( ingredients );
+            IEnumerable<IngredientSlot> diffInQuery = ingredients.Except( recipe.ingredients );
 
             if( diffQuery.Count() == 0 && diffInQuery.Count() == 0 )
             {

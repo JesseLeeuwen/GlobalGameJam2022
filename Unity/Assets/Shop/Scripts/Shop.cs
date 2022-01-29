@@ -20,6 +20,8 @@ public class Shop : MonoBehaviour
 
     void Start()
     {
+        people = Instantiate<People>(people);
+        
         suppliers = new List<Supplier>(Resources.LoadAll<Supplier>("/"));
 
         OnIngredientUsedAsset.AddListener( OnIngredientUsed );

@@ -8,7 +8,7 @@ public class Kettle : MonoBehaviour, IDropHandler
 {
     // handle ondrop of ingredients x
     // remember ingredients x
-    public List<Ingredient> Ingredients;
+    public List<IngredientSlot> Ingredients;
     public RecipeDatabase database;
 
     // show potion details
@@ -20,15 +20,22 @@ public class Kettle : MonoBehaviour, IDropHandler
     public void Craft()
     {
         Recipe recipe = database.GetMatch(Ingredients);
-        print("crafting: " + recipe);
         OnRecipeCrafted.Invoke( recipe );
+
+        Ingredients.Clear();
+    }
+
+    public void Clean()
+    {
+        Ingredients.Clear();
     }
 
     public void OnDrop(PointerEventData eventData)
     {
         IngredientView view = eventData.pointerDrag.GetComponent<IngredientView>();
         Ingredient ingredient = view.ingredient;
-        Ingredients.Add(ingredient);
+
+        IngredientContainer.AddIngredient( Ingredients, ingredient);
      
         OnDropped.Invoke( view.ingredient );
         view.Disolve();
