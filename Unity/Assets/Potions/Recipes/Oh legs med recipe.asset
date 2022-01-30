@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2c5c21b6353b479155c1299e4517d, type: 3}
+  m_Name: Oh legs med recipe
+  m_EditorClassIdentifier: 
+  potion: {fileID: 11400000, guid: e526ab221f9dd0442b090b0d3c83cfd6, type: 2}
+  ingredients:
+  - ingredient: {fileID: 11400000, guid: 2e5b249f0a472144fbc433025133da02, type: 2}
+    amount: 2
+  - ingredient: {fileID: 11400000, guid: c35bbff7b0c4b8d4aba65a6894764ed7, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: 1007df16ab4f9f64282bba96852ef993, type: 2}
+    amount: 1

@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7a2c5c21b6353b479155c1299e4517d, type: 3}
-  m_Name: test recipe
+  m_Name: Smell Cure recipe
   m_EditorClassIdentifier: 
-  potion: {fileID: 11400000, guid: 715b2cbc152477a4f975e475bbc687ac, type: 2}
+  potion: {fileID: 11400000, guid: c60bdc6e7a57daa4c984178462df2e5d, type: 2}
   ingredients:
-  - ingredient: {fileID: 11400000, guid: c35bbff7b0c4b8d4aba65a6894764ed7, type: 2}
+  - ingredient: {fileID: 11400000, guid: 1956c3eb1f50aaa40b627a7efe764258, type: 2}
+    amount: 2
+  - ingredient: {fileID: 11400000, guid: f7077da7e9bf4774489eaffbde21e530, type: 2}
     amount: 1
-  - ingredient: {fileID: 11400000, guid: 3b13a1c935342e5428c8d61a9cd0814d, type: 2}
+  - ingredient: {fileID: 11400000, guid: 1007df16ab4f9f64282bba96852ef993, type: 2}
     amount: 1

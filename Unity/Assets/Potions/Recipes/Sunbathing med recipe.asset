@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2c5c21b6353b479155c1299e4517d, type: 3}
+  m_Name: Sunbathing med recipe
+  m_EditorClassIdentifier: 
+  potion: {fileID: 11400000, guid: c4493393dd05d744cbab93071a083845, type: 2}
+  ingredients:
+  - ingredient: {fileID: 11400000, guid: 1956c3eb1f50aaa40b627a7efe764258, type: 2}
+    amount: 2
+  - ingredient: {fileID: 11400000, guid: f7077da7e9bf4774489eaffbde21e530, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: c35bbff7b0c4b8d4aba65a6894764ed7, type: 2}
+    amount: 1
