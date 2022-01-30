@@ -10,13 +10,20 @@ public class Shop : MonoBehaviour
     public float cash;
     public float reputation;
 
+    public bool active;
+    public float CraftTime;
+    [HideInInspector] public float CurrentTime;
+
     public Customer CurrentCustomer;
     [SerializeField] private People people;
     [SerializeField] private List<Supplier> suppliers;
     
     [Header("Events")]
-    [SerializeField] private EventAsset OnNewCustomer;
-    [SerializeField] private EventAsset OnIngredientUsedAsset;
+    [SerializeField] private EventAsset onNewCustomer;
+    [SerializeField] private EventAsset onIngredientUsed;
+    [SerializeField] private EventAsset onStart;
+    [SerializeField] private EventAsset onCraft;
+    [SerializeField] private EventAsset onTimeout;
 
     void Start()
     {
@@ -24,10 +31,41 @@ public class Shop : MonoBehaviour
         
         suppliers = new List<Supplier>(Resources.LoadAll<Supplier>("/"));
 
-        OnIngredientUsedAsset.AddListener( OnIngredientUsed );
+        onIngredientUsed.AddListener( OnIngredientUsed );
+        onStart.AddListener( OnStart );
+        onCraft.AddListener( OnCraft );
 
+        NewCustomer();
+    }
+
+    void Update()
+    {
+        if(!active)
+            return;
+            
+        CurrentTime += Time.deltaTime;
+        if( CurrentTime >= CraftTime )
+        {
+            onTimeout.Invoke(null);
+            active = false;
+        }
+    }
+
+    public void NewCustomer()
+    {
         CurrentCustomer = people.GetNext();
-        OnNewCustomer.Invoke( CurrentCustomer );
+        onNewCustomer.Invoke( CurrentCustomer );
+    }
+
+    private void OnStart( object data )
+    {
+        CurrentTime = 0;
+        active = true;
+    }
+
+    private void OnCraft(object data)
+    {
+        active = false;
     }
 
     private void OnIngredientUsed( object data )

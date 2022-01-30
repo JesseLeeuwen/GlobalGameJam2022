@@ -11,6 +11,7 @@ public class PotionInfoPanel : MonoBehaviour
     [SerializeField] private GameObject effectTextPrefab;
 
     [SerializeField, HideInInspector] private CanvasGroup group;
+    [SerializeField, HideInInspector] private DelayedEvent reset;
 
     [Header("Events")]
     [SerializeField] private EventAsset onPotionCraft;
@@ -20,6 +21,8 @@ public class PotionInfoPanel : MonoBehaviour
     {
         onPotionCraft.AddListener( OnPotionCraft );
         onNewCustomer.AddListener( OnNewCustomer );
+
+        reset = GetComponent<DelayedEvent>();
 
         group = GetComponent<CanvasGroup>();
     }
@@ -58,6 +61,7 @@ public class PotionInfoPanel : MonoBehaviour
         if( potion == null )
             return;
 
+        reset.enabled = true;
         group.alpha = 1;
         Refresh( potion );
     }
