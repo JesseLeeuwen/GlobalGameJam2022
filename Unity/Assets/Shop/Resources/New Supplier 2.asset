@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81beea15a0dda1a4391b617284be4092, type: 3}
-  m_Name: New Supplier
+  m_Name: New Supplier 2
   m_EditorClassIdentifier: 
   ingredients:
-  - {fileID: 11400000, guid: c35bbff7b0c4b8d4aba65a6894764ed7, type: 2}
-  - {fileID: 11400000, guid: 3b13a1c935342e5428c8d61a9cd0814d, type: 2}
-  - {fileID: 11400000, guid: f7077da7e9bf4774489eaffbde21e530, type: 2}
-  repMinimum: 10
+  - {fileID: 11400000, guid: ad9615d319ac6474b8717f0251a8bbac, type: 2}
+  repMinimum: 50

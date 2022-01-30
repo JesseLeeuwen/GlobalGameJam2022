@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a5c154add44934098e63fe21b585c6, type: 3}
-  m_Name: Customer 1
+  m_Script: {fileID: 11500000, guid: 81beea15a0dda1a4391b617284be4092, type: 3}
+  m_Name: New Supplier 3
   m_EditorClassIdentifier: 
-  sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  effects:
-  - {fileID: 11400000, guid: 3172786a71cf73e4eb646ea2d97d2722, type: 2}
+  ingredients:
+  - {fileID: 11400000, guid: 2e5b249f0a472144fbc433025133da02, type: 2}
+  repMinimum: 50
