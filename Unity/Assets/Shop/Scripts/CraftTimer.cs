@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 public class CraftTimer : MonoBehaviour
 {
-    [SerializeField] private Slider slider;
+    [SerializeField] private Material material;
     [SerializeField] private Shop shop;
 
     void Start()
     {
-        slider = GetComponent<Slider>();
         shop = FindObjectOfType<Shop>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        slider.value = shop.CurrentTime / shop.CraftTime;   
+        float progress = shop.CurrentTime / shop.CraftTime;   
+        material.SetFloat("_Top", progress);
     }
 }

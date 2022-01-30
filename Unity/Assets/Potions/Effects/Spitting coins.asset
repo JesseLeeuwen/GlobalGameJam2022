@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9460728ed8af86241b9362ad0f1865d2, type: 3}
   m_Name: Spitting coins
   m_EditorClassIdentifier: 
-  Name: 
   Description: 
+  revealAudio: event:/Falling Coins

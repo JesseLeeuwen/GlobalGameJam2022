@@ -11,6 +11,9 @@ public class Kettle : MonoBehaviour, IDropHandler
     public List<IngredientSlot> Ingredients;
     public RecipeDatabase database;
 
+    [FMODUnity.EventRef]
+    public string resetAudio;
+
     // show potion details
     [Header("events")]
     [SerializeField] private EventAsset OnRecipeCrafted;
@@ -30,6 +33,7 @@ public class Kettle : MonoBehaviour, IDropHandler
 
     public void Clean()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(resetAudio);
         Ingredients.Clear();
     }
 
@@ -37,6 +41,8 @@ public class Kettle : MonoBehaviour, IDropHandler
     {
         IngredientView view = eventData.pointerDrag.GetComponent<IngredientView>();
         Ingredient ingredient = view.ingredient;
+
+        FMODUnity.RuntimeManager.PlayOneShot(ingredient.UsageAudio);
 
         IngredientContainer.AddIngredient( Ingredients, ingredient);
      

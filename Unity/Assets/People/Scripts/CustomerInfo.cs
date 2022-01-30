@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+using TMPro;
+
 using Utilities.Events;
 
 public class CustomerInfo : MonoBehaviour, IPointerClickHandler
@@ -10,6 +12,7 @@ public class CustomerInfo : MonoBehaviour, IPointerClickHandler
     public EventAsset OnNewCustomerAsset;
     private TextAnimation textAnimation;
     [SerializeField] private EventAsset start;
+    [SerializeField] private TextMeshProUGUI name;
 
     void Awake()
     {
@@ -24,9 +27,8 @@ public class CustomerInfo : MonoBehaviour, IPointerClickHandler
         gameObject.SetActive( true );
         Customer customer = (Customer)data;
 
-        string story = "Hi my name is " + customer.name;
-        story += "\n";
-
+        name.text = customer.name;
+        string story = string.Empty;
         for(int i = 0; i < customer.effects.Count; ++i) 
         {
             story += customer.effects[i].Description;

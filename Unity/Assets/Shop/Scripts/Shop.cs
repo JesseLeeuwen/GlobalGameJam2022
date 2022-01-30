@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using FMODUnity;
+
 using Utilities.Events;
 
 public class Shop : MonoBehaviour
@@ -12,11 +14,13 @@ public class Shop : MonoBehaviour
 
     public bool active;
     public float CraftTime;
-    [HideInInspector] public float CurrentTime;
+    public float CurrentTime;
 
+    [SerializeField] private float timeoutPenalty;
+
+    public List<Supplier> Suppliers;
     public Customer CurrentCustomer;
     [SerializeField] private People people;
-    [SerializeField] private List<Supplier> suppliers;
     
     [Header("Events")]
     [SerializeField] private EventAsset onNewCustomer;
@@ -25,11 +29,15 @@ public class Shop : MonoBehaviour
     [SerializeField] private EventAsset onCraft;
     [SerializeField] private EventAsset onTimeout;
 
+    [Header("Audio")]
+    [SerializeField, EventRef] private string NewCustomerAudio;
+    [SerializeField, EventRef] private string PotionSold;
+
     void Start()
     {
         people = Instantiate<People>(people);
         
-        suppliers = new List<Supplier>(Resources.LoadAll<Supplier>("/"));
+        Suppliers = new List<Supplier>(Resources.LoadAll<Supplier>("/"));
 
         onIngredientUsed.AddListener( OnIngredientUsed );
         onStart.AddListener( OnStart );
@@ -47,13 +55,20 @@ public class Shop : MonoBehaviour
         if( CurrentTime >= CraftTime )
         {
             onTimeout.Invoke(null);
+            reputation += timeoutPenalty;
             active = false;
         }
     }
 
     public void NewCustomer()
     {
+        if( CurrentCustomer != null )
+        {
+            people.ReturnToPool( CurrentCustomer );
+        }
+
         CurrentCustomer = people.GetNext();
+        FMODUnity.RuntimeManager.PlayOneShot(NewCustomerAudio);
         onNewCustomer.Invoke( CurrentCustomer );
     }
 
@@ -66,7 +81,10 @@ public class Shop : MonoBehaviour
     private void OnCraft(object data)
     {
         Recipe recipe = (Recipe)data;
+        if( data == null )
+            return;
 
+        FMODUnity.RuntimeManager.PlayOneShot(PotionSold);
         cash += recipe.potion.value;
         reputation += recipe.potion.RepChange;
         
@@ -81,6 +99,6 @@ public class Shop : MonoBehaviour
 
     internal bool CanSupply(Ingredient ingredient)
     {
-        return suppliers.Find(x => x.CanSupply( ingredient, reputation)) != null;
+        return Suppliers.Find(x => x.CanSupply( ingredient, reputation)) != null;
     }
 }

@@ -3,13 +3,19 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System;
 
+using FMODUnity;
+
 using Utilities.Events;
 
 public class IngredientView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Ingredient ingredient;
+    
+    [SerializeField, EventRef] private string grabAudio;
+
     [Header("Events")]
     public EventAsset OnNewCustomerAsset;
+
 
     [SerializeField, HideInInspector] private Shop shop;
 

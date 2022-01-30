@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredient: {fileID: 11400000, guid: c35bbff7b0c4b8d4aba65a6894764ed7, type: 2}
   OnNewCustomerAsset: {fileID: 11400000, guid: 0d6c31d1f59bd1a47a1be147f5e19700, type: 2}
+  grabAudio: event:/Picking Up Item
   shop: {fileID: 0}
   group: {fileID: 900653644}
   transform: {fileID: 900653642}

@@ -8,7 +8,7 @@ using TMPro;
 public class ShopStatusDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI coins;
-    [SerializeField] private TextMeshProUGUI reputation;
+    [SerializeField] private Image reputation;
 
     [SerializeField] private Shop shop;
 
@@ -19,7 +19,7 @@ public class ShopStatusDisplay : MonoBehaviour
     
     void Update()
     {
-        coins.text = shop.cash.ToString();
-        reputation.text = shop.reputation.ToString();
+        coins.text = shop.cash.ToString("C").Substring(1) + ",-";
+        reputation.fillAmount = shop.reputation / 500;
     }
 }

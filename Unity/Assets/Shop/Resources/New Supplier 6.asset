@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredients:
   - {fileID: 11400000, guid: 1007df16ab4f9f64282bba96852ef993, type: 2}
-  repMinimum: 50
+  repMinimum: 0
