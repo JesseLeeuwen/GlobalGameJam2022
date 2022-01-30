@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 402229ddfe52c8147814195f8205a588, type: 3}
+  m_Name: Attraction low
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
+  value: 0
+  RepChange: 0
+  cures:
+  - {fileID: 11400000, guid: 0fbc33468447bb84aba59024d005405e, type: 2}
+  causes:
+  - {fileID: 11400000, guid: a1b49e8907842204681f35e955bc8f1b, type: 2}
