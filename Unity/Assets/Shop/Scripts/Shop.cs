@@ -42,7 +42,7 @@ public class Shop : MonoBehaviour
     {
         if(!active)
             return;
-            
+
         CurrentTime += Time.deltaTime;
         if( CurrentTime >= CraftTime )
         {
@@ -65,6 +65,11 @@ public class Shop : MonoBehaviour
 
     private void OnCraft(object data)
     {
+        Recipe recipe = (Recipe)data;
+
+        cash += recipe.potion.value;
+        reputation += recipe.potion.RepChange;
+        
         active = false;
     }
 
