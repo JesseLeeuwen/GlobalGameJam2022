@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9460728ed8af86241b9362ad0f1865d2, type: 3}
   m_Name: Oh legs
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
+  Description: 'Hello magician,
+
+    I ride a lot on my horse. Therefore I have
+    a bad O-Leg disorder.
+
+    Can you help me with my legs?'
+  revealAudio: 

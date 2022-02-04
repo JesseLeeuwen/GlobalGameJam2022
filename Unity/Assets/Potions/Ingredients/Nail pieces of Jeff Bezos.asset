@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f138b204a82dfc848a2cba388aafae84, type: 3}
   m_Name: Nail pieces of Jeff Bezos
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  Cost: 5
+  Sprite: {fileID: 862824162, guid: 0ba6958ae1234be44ae566bbeb055185, type: 3}
+  Cost: 50
   UsageAudio: event:/Adding Something Sizzling

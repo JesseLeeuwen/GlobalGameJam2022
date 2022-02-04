@@ -75,8 +75,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -93,13 +93,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -142,6 +142,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 900653644, guid: 06160234b2f225142991acdd310df6d9, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 900653645, guid: 06160234b2f225142991acdd310df6d9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3355891946163818112, guid: 06160234b2f225142991acdd310df6d9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -232,6 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 900653643, guid: 06160234b2f225142991acdd310df6d9, type: 3}
+    - {fileID: 900653644, guid: 06160234b2f225142991acdd310df6d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 06160234b2f225142991acdd310df6d9, type: 3}
 --- !u!224 &430080840435479977 stripped
 RectTransform:
@@ -255,11 +264,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a6118bfbe2a2d4eac5f98f2b7db40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kettle: {fileID: 0}
+  ingredients: []
   index: 0
   amountText: {fileID: 7671000991116201381}
   graphics: {fileID: 3127030650297981280}
-  imasge: {fileID: 3127030650297981284}
+  image: {fileID: 3127030650297981284}
   OnDropped: {fileID: 11400000, guid: 5395631128c85544d944919d93fa6998, type: 2}
 --- !u!1 &3127030650297981280 stripped
 GameObject:

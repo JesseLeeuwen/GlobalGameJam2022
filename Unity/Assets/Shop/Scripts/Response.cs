@@ -18,7 +18,7 @@ public class Response : MonoBehaviour
 
     private void OnCraft( object data )
     {
-        Potion potion = (Potion)data;
+        Potion potion = ((Recipe)data).potion;
         if( potion == null )
             return;
             

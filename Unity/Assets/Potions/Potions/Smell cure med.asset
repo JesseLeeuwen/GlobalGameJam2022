@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Smell cure med
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  value: 0
+  value: 150
   RepChange: 0
+  Response: "*Before you there is a lobster at the spot where once the customer stood.
+    Hmm.. \r\nStrange.. How odd.*"
   cures:
   - {fileID: 11400000, guid: 8be2b40ed3a0f0745b17fad99348e24b, type: 2}
   causes:

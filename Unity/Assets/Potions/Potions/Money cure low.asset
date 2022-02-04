@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Money cure low
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  value: 0
-  RepChange: 0
+  value: 125
+  RepChange: 10
+  Response: 
   cures:
   - {fileID: 11400000, guid: fb9ef7f5b95365c429f80365268bcd73, type: 2}
   causes:

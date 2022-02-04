@@ -15,6 +15,8 @@ MonoBehaviour:
   sprite: {fileID: 0}
   value: 0
   RepChange: 0
+  Response: "*Before you there is a lobster at the spot where once the customer stood.
+    Hmm.. \r\nStrange.. How odd.*"
   cures:
   - {fileID: 11400000, guid: d0b80fb96cfe00c4eb51ed83172bf2d8, type: 2}
   causes:

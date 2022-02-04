@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Inflated
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  value: 100
-  RepChange: -10
+  value: 300
+  RepChange: -30
+  Response: "\u201CPraise the deity, good sir! I can finally breath. Hmm.. Maybe
+    I shall fill my stomach with \r\nsome food, hah!\u201D"
   cures:
   - {fileID: 11400000, guid: d0b80fb96cfe00c4eb51ed83172bf2d8, type: 2}
   causes:

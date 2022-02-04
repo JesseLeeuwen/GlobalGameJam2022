@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Inflated med
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  value: 0
+  value: 150
   RepChange: 0
+  Response: '*Customer slams on the table with no head.*'
   cures:
   - {fileID: 11400000, guid: d0b80fb96cfe00c4eb51ed83172bf2d8, type: 2}
   causes:

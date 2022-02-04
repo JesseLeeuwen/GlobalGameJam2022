@@ -14,10 +14,20 @@ public class Kettle : MonoBehaviour, IDropHandler
     [FMODUnity.EventRef]
     public string resetAudio;
 
+    public List<IngredientSlotView> views;
+
     // show potion details
     [Header("events")]
     [SerializeField] private EventAsset OnRecipeCrafted;
     [SerializeField] private EventAsset OnDropped;
+
+    void Start()
+    {
+        for( int i = 0; i < views.Count; ++i)
+        {
+            views[i].ingredients = Ingredients;
+        }
+    }
 
     // query database for potions 
     public void Craft()

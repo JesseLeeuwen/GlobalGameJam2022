@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Smell cure
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  value: 0
-  RepChange: 0
+  value: 300
+  RepChange: -30
+  Response: "\u201CGood sir! I can smell everything in the world-.. Wait.. My nose
+    is enormous now! Ah, \r\nwell you have done what I asked you to do. Thank you
+    I guess.\u201D"
   cures:
   - {fileID: 11400000, guid: 8be2b40ed3a0f0745b17fad99348e24b, type: 2}
   causes:

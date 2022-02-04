@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9460728ed8af86241b9362ad0f1865d2, type: 3}
   m_Name: Creature stuck on head
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
+  Description: "Hi - Hello,\r\nCan you help me - No don\u2019t help me.\r\nPLEASE
+    help me - NOO!\r\nI have a creature stuck on my head, please let it disappears.
+    No I like it here!"
+  revealAudio: 

@@ -13,6 +13,20 @@ public class BookAnimation : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if( animator.GetBool("Active") == true )
+            return;
+
+        FMODUnity.RuntimeManager.PlayOneShot(BookInteractionSound);
+        animator.SetBool("Active", true);
+    }
+
+    public void Close()
+    {
+        animator.SetBool("Active", false);
+    }
+
+    public void Toggle()
+    {
         FMODUnity.RuntimeManager.PlayOneShot(BookInteractionSound);
         animator.SetBool("Active", !animator.GetBool("Active"));
     }

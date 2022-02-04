@@ -7,36 +7,35 @@ using Utilities.Events;
 
 public class IngredientSlotView : MonoBehaviour
 {
-    public Kettle kettle;
+    public List<IngredientSlot> ingredients;
     public int index;
 
     [SerializeField] private GameObject amountText;
     private TextMeshProUGUI text;
     [SerializeField] private GameObject graphics;
-    [SerializeField] private Image imasge;
+    [SerializeField] private Image image;
 
     [Header("Events")]
     [SerializeField] private EventAsset OnDropped;
 
     void Start()
     {
-        kettle = FindObjectOfType<Kettle>();
         text = amountText.GetComponent<TextMeshProUGUI>();
     }
 
     void Update()
     {
         IngredientSlot slot = new IngredientSlot(){amount = 0};
-        if(kettle.Ingredients.Count > index)
-            slot = kettle.Ingredients[index];
+        if( ingredients.Count > index)
+            slot = ingredients[index];
 
         graphics.SetActive(slot.amount != 0 );
         amountText.SetActive(slot.amount > 1 );
         text.text = slot.amount.ToString();
-
         if( slot.amount == 0 )
             return;
+        
+        image.sprite = slot.ingredient.Sprite;
 
-        imasge.sprite = slot.ingredient.Sprite;
     }
 }

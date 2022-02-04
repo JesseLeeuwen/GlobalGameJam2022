@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f138b204a82dfc848a2cba388aafae84, type: 3}
   m_Name: Resin of the Amber tree
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 0}
-  Cost: 0
+  Sprite: {fileID: 1676205565, guid: 0ba6958ae1234be44ae566bbeb055185, type: 3}
+  Cost: 50
   UsageAudio: event:/Adding Solid Item

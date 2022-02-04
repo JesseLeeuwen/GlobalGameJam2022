@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9460728ed8af86241b9362ad0f1865d2, type: 3}
   m_Name: Smell better
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
+  Description: "Hi magician,\r\nYou probally know that I create the best cheese in
+    SlipperyTown.\r\nBut.. since a week I can\u2019t smell a thing.. I need my nose
+    to check the quality of the \r\ncheese. Can you give me back my smell!"
+  revealAudio: 

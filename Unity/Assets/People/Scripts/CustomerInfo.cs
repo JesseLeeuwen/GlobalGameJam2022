@@ -12,7 +12,6 @@ public class CustomerInfo : MonoBehaviour, IPointerClickHandler
     public EventAsset OnNewCustomerAsset;
     private TextAnimation textAnimation;
     [SerializeField] private EventAsset start;
-    [SerializeField] private TextMeshProUGUI name;
 
     void Awake()
     {
@@ -27,7 +26,6 @@ public class CustomerInfo : MonoBehaviour, IPointerClickHandler
         gameObject.SetActive( true );
         Customer customer = (Customer)data;
 
-        name.text = customer.name;
         string story = string.Empty;
         for(int i = 0; i < customer.effects.Count; ++i) 
         {

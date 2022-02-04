@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9460728ed8af86241b9362ad0f1865d2, type: 3}
   m_Name: Being attractive
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
+  Description: "Good day,\r\nI want to be more attractive for others. \r\nNo one
+    is looking at me..\r\nCan you help me with that?"
+  revealAudio: 

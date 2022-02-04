@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Attraction med
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  value: 0
+  value: 150
   RepChange: 0
+  Response: "\u201CEh.. This is not what I wanted! Now my legs has turned into a
+    L-shape!!\u201D"
   cures:
   - {fileID: 11400000, guid: 0fbc33468447bb84aba59024d005405e, type: 2}
   causes:

@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Creature med
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  value: 0
+  value: 150
   RepChange: 0
+  Response: "*Poof! Huh.. Customer turned into a magnet. Peculiar\u2026 Very peculiar.
+    At least the \r\ncustomer attracts something. Request completed.*"
   cures:
   - {fileID: 11400000, guid: a8169328b3c5c9044b5a1bd94d97549b, type: 2}
   causes:

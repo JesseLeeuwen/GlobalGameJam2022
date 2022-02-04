@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Oh legs low
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  value: 0
-  RepChange: 0
+  value: 125
+  RepChange: 10
+  Response: "*Poof! Huh.. Customer turned into a magnet. Peculiar\u2026 Very peculiar.
+    At least the \r\ncustomer attracts something. Request completed.*"
   cures:
   - {fileID: 11400000, guid: f156910e4c45ceb42b844e223394cc09, type: 2}
   causes:

@@ -19,7 +19,7 @@ public class ShopStatusDisplay : MonoBehaviour
     
     void Update()
     {
-        coins.text = shop.cash.ToString("C").Substring(1) + ",-";
-        reputation.fillAmount = shop.reputation / 500;
+        coins.text = shop.cash.ToString("C0").Substring(1) + ",-";
+        reputation.fillAmount = shop.reputation / 500.0f;
     }
 }

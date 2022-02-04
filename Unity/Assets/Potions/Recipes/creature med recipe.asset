@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a2c5c21b6353b479155c1299e4517d, type: 3}
   m_Name: creature med recipe
   m_EditorClassIdentifier: 
-  potion: {fileID: 11400000, guid: cbb9b97215ec69f4589d3689ec2a65b4, type: 2}
+  potion: {fileID: 11400000, guid: e9ab88ccf490c2943acd0438410d8ca3, type: 2}
   ingredients:
   - ingredient: {fileID: 11400000, guid: 1007df16ab4f9f64282bba96852ef993, type: 2}
     amount: 2

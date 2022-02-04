@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Creature low
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  value: 0
-  RepChange: 0
+  value: 125
+  RepChange: 10
+  Response: "Sir\u2026 Sir! SIR! I\u2019m-.. I\u2019m blowing up! I don\u2019t want
+    to roll back home! This is not what I \r\nimagined of my day!\u201D"
   cures:
   - {fileID: 11400000, guid: a8169328b3c5c9044b5a1bd94d97549b, type: 2}
   causes:

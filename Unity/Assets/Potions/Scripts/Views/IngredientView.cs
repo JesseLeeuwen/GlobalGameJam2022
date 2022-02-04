@@ -1,3 +1,5 @@
+using System.Collections;
+
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -23,6 +25,8 @@ public class IngredientView : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     [SerializeField, HideInInspector] private new RectTransform transform;
     [SerializeField, HideInInspector] private Canvas canvas;
 
+   [SerializeField] private Image image;
+
     internal void Disolve()
     {
         // play drop effect
@@ -36,14 +40,19 @@ public class IngredientView : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         group = GetComponent<CanvasGroup>();
     }
 
-    void Start()
+    IEnumerator Start()
     {
         OnNewCustomerAsset.AddListener( OnNewCustomer );
+        yield return new WaitForEndOfFrame();
+        image.sprite = ingredient.Sprite;
+        group.alpha = 0;
+        image.enabled = true;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         group.blocksRaycasts = false;
+        group.alpha = 1;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -54,6 +63,7 @@ public class IngredientView : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public void OnEndDrag(PointerEventData eventData)
     {
         group.blocksRaycasts = true;
+        group.alpha = 0;
         transform.anchoredPosition = Vector2.zero;
     }
 
@@ -61,6 +71,5 @@ public class IngredientView : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     {
         // check supply chain
         group.blocksRaycasts = shop.CanSupply(ingredient );
-        group.alpha = group.blocksRaycasts? 1 : 0.5f;
     }
 }

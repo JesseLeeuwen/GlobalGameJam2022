@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Attraction low
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  value: 0
-  RepChange: 0
+  value: 125
+  RepChange: 10
+  Response: '*The customer opens his mouth to object, but a lot of coins fall out
+    of his mouth. KA-
+
+    CHING.*'
   cures:
   - {fileID: 11400000, guid: 0fbc33468447bb84aba59024d005405e, type: 2}
   causes:

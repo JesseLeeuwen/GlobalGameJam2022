@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Sunbathing med
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  value: 0
+  value: 150
   RepChange: 0
+  Response: 
   cures:
   - {fileID: 11400000, guid: 7bd9e383c6b969449abae72efa9d7b94, type: 2}
   causes:

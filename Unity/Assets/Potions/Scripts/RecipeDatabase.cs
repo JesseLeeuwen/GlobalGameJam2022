@@ -11,6 +11,11 @@ public class RecipeDatabase : ScriptableObject
     {
         recipes.Add(recipe);
     }
+    
+    public List<Recipe> GetCures(Effect effect)
+    {
+        return recipes.FindAll(x => x.potion.cures.Contains(effect) );
+    }
 
     public Recipe GetMatch( List<IngredientSlot> ingredients )
     {

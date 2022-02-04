@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9460728ed8af86241b9362ad0f1865d2, type: 3}
   m_Name: Inflated
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
+  Description: "Hello good sir,\r\nI need your help!\r\nMy body feels INFLATED! \r\nCan
+    you make me one of your potions that can cure me?"
+  revealAudio: 
